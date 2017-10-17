@@ -12,20 +12,9 @@ class MyListItem extends React.PureComponent {
   render() {
     return (
       <Card title='HELLO WORLD'>
-      {/*image={require('../images/pic2.jpg')}>*/}
         <Text style={{marginBottom: 10}}>
           The idea with React Native Elements is more about component structure than actual design.
         </Text>
-        {/*}<Button
-          icon={{name: 'code'}}
-          backgroundColor='#03A9F4'
-          fontFamily='Lato'
-          buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-          title='VIEW NOW' />*/}
-      {/*}<SomeOtherWidget
-        {...this.props}
-        onPress={this._onPress}
-      />*/}
       </Card>
     )
   }
@@ -95,6 +84,7 @@ class ESHeader extends React.Component {
   }
 }
 
+var data = ['0','1','2','3','4','5','6','7','8','9','10']
 class HomeScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: 'Home',
@@ -107,11 +97,12 @@ class HomeScreen extends React.Component {
     return (
       <View>
         <ESHeader navigation={this.props.navigation}/>
-        <MyList />
+        <MyList data={data}/>
       </View>
     );
   }
 }
+
 
 class StocksScreen extends React.Component {
   static navigationOptions = {
